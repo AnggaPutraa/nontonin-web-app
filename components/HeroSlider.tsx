@@ -24,7 +24,7 @@ const HeroSlider = ({ movies }: Props) => {
                             <SwiperSlide key={i}>
                                 {({ isActive }) => (
                                     <div className='relative flex flex-col space-y-2 md:space-y-4 py-16 h-[60vh] lg:h-[85vh] justify-center'>
-                                        <div className='absolute top-0 left-0 -z-10 h-[85vh] w-full opacity-40'>
+                                        <div className='absolute top-0 left-0 -z-10 h-[120vh] w-full opacity-40'>
                                             <Image
                                                 src={getImageUrl + item.backdrop_path}
                                                 fill className='object-cover' alt={''} />
@@ -33,17 +33,17 @@ const HeroSlider = ({ movies }: Props) => {
                                             className="inset-x-0 bottom-0 flex justify-center bg-gradient-to-t pt-32 pb-4 lg:pb-8 pointer-events-none from-black absolute">
                                         </div>
                                         <div className='flex flex-row justify-between items-center'>
-                                            <div className='pl-4 md:pl-6 lg:pl-12 pr-2'>
-                                                <h1 className='text-2xl  md:max-w-lg lg:max-w-xl md:text-4xl lg:text-5xl font-bold'>{item?.title || item?.name || item?.original_name}</h1>
+                                            <div className='pl-4 md:pl-6 lg:pl-12 pr-2 flex flex-col space-y-2'>
+                                                <h1 className='text-xl md:max-w-lg lg:max-w-xl md:text-2xl lg:text-4xl font-bold'>{item?.title || item?.name || item?.original_name}</h1>
                                                 <p className='max-w-sm md:max-w-lg lg:max-w-xl text-sx md:text-md text-shadow-md'>{item.overview}</p>
-                                                <div className='flex flex-row space-x-2 mt-2'>
-                                                    <button type="button" className="text-black bg-white transition hover:opacity-75 font-medium rounded-lg text-sm px-4 py-2 text-center inline-flex items-center mb-2 gap-2">
-                                                        <PlayIcon className='h-6 w-6 text-black' />
-                                                        Play
+                                                <div className='flex flex-row space-x-2 pt-4'>
+                                                    <button type="button" className="text-blue-600 hover:text-white border-2 border-blue-600 hover:bg-blue-600  transition font-medium rounded-2xl text-sm px-4 py-2 text-center inline-flex items-center mb-2 gap-2">
+                                                        <PlayIcon className='h-4 w-4' />
+                                                        Watch now
                                                     </button>
-                                                    <button type="button" className="text-white bg-gray-400/40 bg-opacity-5 transition hover:bg-opacity-70 font-medium rounded-lg text-sm px-4 py-2 text-center inline-flex items-center mb-2 gap-2">
-                                                        <InformationCircleIcon className='h-6 w-6 text-white' />
-                                                        More Info
+                                                    <button type="button" className="text-white hover:text-black border-2 border-white hover:bg-white  transition font-medium rounded-2xl text-sm px-4 py-2 text-center inline-flex items-center mb-2 gap-2">
+                                                        <InformationCircleIcon className='h-4 w-4' />
+                                                        Watch now
                                                     </button>
                                                 </div>
                                             </div>

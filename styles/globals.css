@@ -10,3 +10,10 @@
         @apply fixed flex items-center justify-between w-full z-50 p-4 transition-all lg:px-10 lg:py-6
     }
 }
+
+@layer components {
+    .header-item-link {
+        @apply text-gray-300 hover:text-white text-sm cursor-pointer transition
+        duration-[.3s];
+    }
+}

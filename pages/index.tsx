@@ -4,6 +4,7 @@ import Image from 'next/image'
 import Footer from '../components/Footer'
 import Header from '../components/Header'
 import HeroSlider from '../components/HeroSlider'
+import Row from '../components/Row'
 import { Movie } from '../movie-typing'
 import request from '../utils/request'
 
@@ -25,6 +26,13 @@ const Home = ({
       <Header />
       <main>
         <HeroSlider movies={netflixOriginals} />
+        <Row genre={'Now Trending'} movies={trendingNow} />
+        <Row genre={'Top Rated'} movies={topRated} />
+        <Row genre={'Action Movies'} movies={actionMovies} />
+        <Row genre={'Comedy Movies'} movies={comedyMovies} />
+        <Row genre={'Romance Movies'} movies={romanceMovies} />
+        <Row genre={'Horror Movies'} movies={horrorMovies} />
+        <Row genre={'Documentaries'} movies={documentaries} />
       </main>
       <Footer />
     </div>

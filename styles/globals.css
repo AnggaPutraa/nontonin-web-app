@@ -17,6 +17,6 @@
         duration-[.3s];
     }
     .swipper-slide {
-        @apply rounded-xl w-[20vh] h-[30vh] !important
+        @apply rounded-xl w-[20vh] h-[40vh] relative !important
     }
 }
